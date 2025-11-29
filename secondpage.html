@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book Recommender</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Book Recommender</h1>
+    </header>
+
+   
+    <form id="prefsForm">
+      <input id="userName" placeholder="Your name" required />
+      <select id="prefGenre" required>
+        <option value="">Choose genre (or type later)</option>
+        <option>Fantasy</option>
+        <option>Fiction</option>
+        <option>Science</option>
+        <option>Romance</option>
+        <option>History</option>
+        <option>Self-help</option>
+      </select>
+      <button type="submit">Save Preferences</button>
+    </form>
+
+    <div class="controls">
+      <input id="searchInput" placeholder="Search books (title, author)..." style="flex:1"/>
+      <button id="searchBtn">Search</button>
+      <select id="filterSelect">
+        <option value="all">All</option>
+        <option value="hasCover">Has cover</option>
+      </select>
+      <button id="randomRec">Random Reco</button>
+      <button id="showFavs">Show Favorites</button>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h3>Recommendations</h3>
+        <div id="results" class="book-grid" aria-live="polite"></div>
+      </div>
+      <div style="width:320px">
+        <h3>Your Data</h3>
+        <div class="card">
+          <div id="profile">No profile saved</div>
+          <hr />
+          <div class="small">Stats</div>
+          <div id="stats"></div>
+        </div>
+        <h3>Favorites</h3>
+        <div id="favoritesList"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>"
